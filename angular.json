@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "tccangular"
+  "cli": {
+    "analytics": false
+  }
 }
