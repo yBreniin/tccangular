@@ -12,7 +12,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$tccangular-primary: mat.define-palette(mat.$grey-palette, 900);
+$tccangular-primary: mat.define-palette(mat.$light-blue-palette, 100);
 $tccangular-accent: mat.define-palette(mat.$grey-palette, 50);
 
 // The warn palette is optional (defaults to red).
@@ -38,12 +38,13 @@ $tccangular-theme: mat.define-light-theme((
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
 .example-icon {
   padding: 0 14px;
 }
 .example-spacer {
   flex: 1 1 auto;
 }
-
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
