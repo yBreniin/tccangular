@@ -1,0 +1,73 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+  </style>
+
+<header>
+  <p class="header1">
+    <mat-toolbar class="header2" color="primary">
+      <span class="h2span">Custom Clothing</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+
+    <mat-toolbar class="header3" color="primary">
+      <span class="example-spacer"></span>
+      <button mat-flat-button color="primary">
+        <span>Home</span>
+      </button>
+      <button mat-flat-button color="primary">
+        <span>Lookbook</span>
+      </button>
+      <button mat-flat-button color="primary">
+        <span>Mans</span>
+      </button>
+      <button mat-flat-button color="primary">
+        <span>Woman</span>
+      </button>
+      <button mat-flat-button color="primary">
+        <span>Sales</span>
+      </button>
+      <button mat-flat-button color="primary">
+        <span>Stores</span>
+      </button>
+      <button mat-icon-button class="example-icon">
+        <mat-icon>search</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+</header>
+
+<body>
+  <div class="gd">
+    <ngb-carousel class="quadrado">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/banner.jpg" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/banner2.jpg" alt="Random second slide">
+        </div>
+        <div class="carousel-caption">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+
+    <!-- <div class="gd2">
+
+      <ngb-carousel class="redondo">
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/10/moda-anos-90-2.jpg" alt="Random first slide">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div> -->
+
+    </div>
+</body>
