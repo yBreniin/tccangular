@@ -357,7 +357,7 @@ mat-icon {
 }
 
 .banner-app{
-  padding-top:25%;
+  padding-top:30%;
 }
 
 .text{
@@ -373,14 +373,28 @@ mat-icon {
 }
 
 .card1{
-  padding-right: 20px;
-  width: 100%;
+  position: relative;
+  padding-left: 30px;
+  max-width: 100%;
+  min-width: 100%;
+
 }
 
 .card2{
-  padding-right: 20px;
-  width: 100%;
+  position: relative;
+  padding-left: 30px;
+  max-width: 100%;
+  min-width: 100%;
 }
+
+.card3{
+  position: relative;
+  padding-left: 30px;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,200&display=swap");
 
