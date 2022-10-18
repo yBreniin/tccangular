@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lookbook.component.scss']
 })
 export class LookbookComponent implements OnInit {
-
+  value = 'Pesquisar';
   constructor() { }
 
   ngOnInit(): void {

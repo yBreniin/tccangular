@@ -19,7 +19,21 @@
 .header1 {
   display: flex;
   margin-bottom: 0;
+  list-style: none;
+  z-index: 1;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
 }
+
+.app-toolbar{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 
 .header2 {
   height: 100px;
