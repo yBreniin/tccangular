@@ -389,6 +389,7 @@ mat-icon {
 .card1{
   position: relative;
   padding-left: 30px;
+  margin-left: -10%;
   max-width: 100%;
   min-width: 100%;
 
@@ -397,6 +398,7 @@ mat-icon {
 .card2{
   position: relative;
   padding-left: 30px;
+  margin-left: -10%;
   max-width: 100%;
   min-width: 100%;
 }
@@ -404,12 +406,46 @@ mat-icon {
 .card3{
   position: relative;
   padding-left: 30px;
+  margin-left: -10%;
   max-width: 100%;
   min-width: 100%;
 }
 
+.cardespaco{
+  margin-top: -5%;
+  margin-bottom: -5%;
 
+  .compras{
+    margin-top: -5%;
+    padding-right: 10%;
+  }
 
+  .icon{
+    padding-right: 5%;
+  }
+}
+
+.detalhes{
+  td{
+    padding-right: 40px; width: 500px; text-align: center; height: -20px;
+
+  }
+
+  table{
+    margin-left: 80px;
+    align-items: center;
+  }
+
+  .row{
+   margin-top: 2%;
+   margin-left: 16%;
+   align-items: center;
+  }
+
+}
+.card-main {
+  position: relative;
+}
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,200&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,200&family=Oswald:wght@200&display=swap");
