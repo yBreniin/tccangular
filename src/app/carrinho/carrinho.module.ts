@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HomeRoutingModule } from './home-routing.module';
+import { CarrinhoRoutingModule } from './carrinho-routing.module';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HomeComponent } from './home/home.component';
-import { MatInputModule } from '@angular/material/input';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    CarrinhoComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
+    CarrinhoRoutingModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -29,4 +29,4 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ]
 })
-export class HomeModule { }
+export class CarrinhoModule { }

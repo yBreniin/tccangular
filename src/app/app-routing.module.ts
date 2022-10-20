@@ -29,6 +29,14 @@ const routes: Routes = [
   {
     path: 'woman',
     loadChildren: ()=> import('./woman/woman.module').then(m => m.WomanModule)
+  },
+  {
+    path: 'carrinho',
+    loadChildren: ()=> import('./carrinho/carrinho.module').then(m => m.CarrinhoModule)
+  },
+  {
+    path: 'finalizado',
+    loadChildren: ()=> import('./finalizado/finalizado.module').then(m => m.FinalizadoModule)
   }
 ];
 
