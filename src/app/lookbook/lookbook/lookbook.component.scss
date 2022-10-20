@@ -70,7 +70,6 @@
 }
 
 .detalhes{
-  background-color:#FAEBD7;
   padding-top: 10px;
 
 }
@@ -412,7 +411,20 @@ mat-icon {
    margin-top: 50;
   }
 
+}
 
+.cardespaco{
+  margin-top: -5%;
+  margin-bottom: -5%;
+
+  .compras{
+    margin-top: -5%;
+    padding-right: 10%;
+  }
+
+  .icon{
+    padding-right: 5%;
+  }
 }
 
 
