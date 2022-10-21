@@ -304,8 +304,12 @@ mat-icon {
 
 }
 
+.image{
+  padding-left: 100px;
+}
+
 .content a {
-  font-size: 20px;
+  font-size: 25px;
   color: #131313;
   font-weight: 500;
   font-family: "Oswald", sans-serif;
@@ -342,16 +346,16 @@ mat-icon {
 
 .parcela {
   color: #696969;
-  margin-top: -10px;
-  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 20px;
   font-family: "Oswald", sans-serif;
 }
 
 .row {
   --bs-gutter-x: 0;
   border: 0;
-  padding: 50px;
-  padding-left: 7%;
+  padding-left: 300px;
 
 }
 
@@ -472,6 +476,23 @@ mat-icon {
     font-size: 15px;
     padding-top: 10px;
   }
+}
+
+.valor{
+  padding-top: 30px;
+}
+
+.cor{
+  font-size: 13px;
+}
+
+.tam{
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.botao{
+  background-color: #0c0e0d;
 }
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,200&display=swap");
 
