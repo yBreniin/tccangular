@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detalhes.component.scss']
 })
 export class DetalhesComponent implements OnInit {
+  value = 'Pesquisar';
 
   constructor() { }
 
