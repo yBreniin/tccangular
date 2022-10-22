@@ -10,12 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-  ],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -26,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    MatCheckboxModule,
+  ],
 })
-export class HomeModule { }
+export class HomeModule {}

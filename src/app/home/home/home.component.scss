@@ -15,25 +15,23 @@
   }
 }
 
-
 .header1 {
   display: flex;
   margin-bottom: 0;
   list-style: none;
   z-index: 1;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
 }
 
-.app-toolbar{
+.app-toolbar {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 1000;
 }
-
 
 .header2 {
   height: 100px;
@@ -165,7 +163,6 @@
   max-height: 0px;
   border: 0;
   padding-left: 30px;
-
 }
 
 .card:hover .cart-item {
@@ -369,11 +366,11 @@ mat-icon {
   padding-left: 7%;
 }
 
-.banner-app{
-  padding-top:30%;
+.banner-app {
+  padding-top: 30%;
 }
 
-.text{
+.text {
   text-align: center;
   font-size: 30px;
   color: #131313;
@@ -385,16 +382,7 @@ mat-icon {
   padding-top: 20px;
 }
 
-.card1{
-  position: relative;
-  padding-left: 30px;
-  margin-left: -10%;
-  max-width: 100%;
-  min-width: 100%;
-
-}
-
-.card2{
+.card1 {
   position: relative;
   padding-left: 30px;
   margin-left: -10%;
@@ -402,7 +390,7 @@ mat-icon {
   min-width: 100%;
 }
 
-.card3{
+.card2 {
   position: relative;
   padding-left: 30px;
   margin-left: -10%;
@@ -410,41 +398,51 @@ mat-icon {
   min-width: 100%;
 }
 
-.cardespaco{
+.card3 {
+  position: relative;
+  padding-left: 30px;
+  margin-left: -10%;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.cardespaco {
   margin-top: -5%;
   margin-bottom: -5%;
 
-  .compras{
+  .compras {
     margin-top: -5%;
     padding-right: 10%;
   }
 
-  .icon{
+  .icon {
     padding-right: 5%;
   }
 }
 
-.detalhes{
-  td{
-    padding-right: 40px; width: 500px; text-align: center; height: -20px;
-
+.detalhes {
+  td {
+    padding-right: 40px;
+    width: 500px;
+    text-align: center;
+    height: -20px;
   }
 
-  table{
+  table {
     margin-left: 80px;
     align-items: center;
   }
 
-  .row{
-   margin-top: 2%;
-   margin-left: 16%;
-   align-items: center;
+  .row {
+    margin-top: 2%;
+    margin-left: 16%;
+    align-items: center;
   }
-
 }
 .card-main {
   position: relative;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,200&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,200&family=Oswald:wght@200&display=swap");
