@@ -491,9 +491,19 @@ mat-icon {
   font-size: 14px;
 }
 
-.botao{
-  background-color: #0c0e0d;
+
+.btn{
+  border-radius: 0%;
+
 }
+
+.btn:hover{
+  background-color: var(--text-color);
+  background-color: #131313;
+}
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,200&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,200&family=Oswald:wght@200&display=swap");
