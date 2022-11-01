@@ -17,57 +17,48 @@
   }
 </style>
 
-<div class="topo">
-  <header>
-    <p class="header1">
-      <mat-toolbar class="header2" color="primary">
+<body>
+  <header  class="header1">
+      <mat-toolbar class="fundo" >
         <span class="h2span">Custom Clothing</span>
         <span class="example-spacer"></span>
-      </mat-toolbar>
-
-      <mat-toolbar class="header3" color="primary">
         <span class="example-spacer"></span>
-        <button mat-flat-button color="primary" routerLink="/home">
+        <button mat-flat-button routerLink="/home">
           <span>Home</span>
         </button>
-        <button mat-flat-button color="primary" routerLink="/lookbook">
+        <button mat-flat-button  routerLink="/lookbook">
           <span>Lookbook</span>
         </button>
-        <button mat-flat-button color="primary" routerLink="/mans">
+        <button mat-flat-button routerLink="/mans">
           <span>Mans</span>
         </button>
-        <button mat-flat-button color="primary" routerLink="/woman">
+        <button mat-flat-button  routerLink="/woman">
           <span>Woman</span>
         </button>
-        <button mat-flat-button color="primary" routerLink="/sales">
+        <button mat-flat-button  routerLink="/sales">
           <span>Sales</span>
         </button>
-        <button mat-flat-button color="primary" routerLink="/stores">
+        <button mat-flat-button  routerLink="/stores">
           <span>Stores</span>
         </button>
         <button mat-icon-button class="example-icon">
-          <mat-icon>shopping_cart</mat-icon>
+          <mat-icon color="primary">shopping_cart</mat-icon>
         </button>
         <mat-form-field class="example-form-field" appearance="fill">
-          <mat-icon>search</mat-icon>
+          <mat-icon color="primary">search</mat-icon>
           <input matInput type="text" [(ngModel)]="value" />
           <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
-            <mat-icon style="width: 100px;">close</mat-icon>
+            <mat-icon color="primary" style="width: 100px;">close</mat-icon>
           </button>
         </mat-form-field>
-        <!-- <button mat-icon-button class="example-icon">
-        <mat-icon>search</mat-icon>
-      </button> -->
       </mat-toolbar>
-    </p>
+
   </header>
-</div>
-
-<body>
-
-  <div>
 
 
+
+
+  <section class="espaco">
     <div class="gd">
       <ngb-carousel class="quadrado">
         <ng-template ngbSlide>
@@ -559,7 +550,7 @@
 
 
 
-  </div>
+  </section>
 
   <!-- fim card produto -->
 </body>

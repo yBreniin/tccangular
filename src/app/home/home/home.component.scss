@@ -6,8 +6,10 @@
   margin: 4px;
   font-family: "Poppins", sans-serif;
 
+
   mat-icon {
     font-size: 20px;
+
   }
 
   .mat-input-element {
@@ -15,15 +17,22 @@
   }
 }
 
-.header1 {
+
+.header1{
   display: flex;
   margin-bottom: 0;
   list-style: none;
   z-index: 1;
   position: fixed;
-  top: 0;
+  top:0;
   left: 0;
   width: 100%;
+  box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+
+  .fundo{
+    background-color: white ;
+  }
+
 }
 
 .app-toolbar {
@@ -50,7 +59,7 @@
 .header3 {
   height: 100px;
   width: 70%;
-  display: flex;
+  position: fixed;
   gap: 10px;
 }
 
@@ -58,6 +67,11 @@
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 20px;
+}
+
+.espaco{
+  margin-top: 4rem;
+  position: relative;
 }
 
 .gd {
@@ -421,6 +435,7 @@ mat-icon {
 }
 
 .detalhes {
+
   td {
     padding-right: 40px;
     width: 500px;
@@ -428,10 +443,10 @@ mat-icon {
     height: -20px;
   }
 
-  table {
-    margin-left: 80px;
-    align-items: center;
-  }
+  // table {
+  //   margin-left: 80px;
+  //   align-items: center;
+  // }
 
   .row {
     margin-top: 2%;
