@@ -16,7 +16,8 @@
 }
 
 
-.header1 {
+
+.header1{
   display: flex;
   margin-bottom: 0;
   list-style: none;
@@ -25,6 +26,12 @@
   top:0;
   left: 0;
   width: 100%;
+  box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+
+  .fundo{
+    background-color: white ;
+  }
+
 }
 
 .app-toolbar{
