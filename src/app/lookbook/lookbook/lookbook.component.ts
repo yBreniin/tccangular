@@ -1,3 +1,4 @@
+import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LookbookComponent implements OnInit {
   value = 'Pesquisar';
-  constructor() { }
+
+  productList:any;
+  constructor(private api:ApiService) { }
 
   ngOnInit(): void {
+    this.api.getProduct().subscribe(res=>{
+      this.productList=res;
+    })
   }
 
 }
