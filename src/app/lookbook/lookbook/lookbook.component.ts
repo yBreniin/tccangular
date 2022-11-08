@@ -1,5 +1,7 @@
 import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Produtos } from '../../core/model';
 
 @Component({
   selector: 'app-lookbook',
@@ -7,15 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lookbook.component.scss']
 })
 export class LookbookComponent implements OnInit {
-  value = 'Pesquisar';
+  produtos: Produtos[] = [];
 
-  productList:any;
-  constructor(private api:ApiService) { }
+  value = 'Pesquisar';
+  constructor(private api:ApiService) {
+   }
 
   ngOnInit(): void {
-    this.api.getProduct().subscribe(res=>{
-      this.productList=res;
-    })
+    this.listarProdutos();
+
+
+    // this.api.getProduct().subscribe(res=>{
+    //   this.productList=res;
+    // })
   }
 
+  listarProdutos() {
+    this.api.listarProdutos().subscribe(retorno => {
+      this.produtos = retorno;
+    })
+  }
 }

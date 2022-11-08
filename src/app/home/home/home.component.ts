@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produtos } from 'src/app/core/model';
 import { Observable } from 'rxjs';
-import { HomeService } from '../home.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -12,16 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 
 export class HomeComponent implements OnInit {
   value = 'Pesquisar';
-
-  produtos: Observable<Produtos[]>;
   api = ['nomeproduto', 'produtopreco'];
   constructor(
-    private homeService: HomeService,
-    private activatedRoute: ActivatedRoute
-    )
-    {
-    this.produtos = this.homeService.list();
-  }
+    private activatedRoute: ActivatedRoute){}
 
   ngOnInit(): void {}
 

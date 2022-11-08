@@ -70,7 +70,7 @@
   <div class="row">
 
     <!-- card1 -->
-    <ng-container *ngFor="let item of productList">
+    <ng-container *ngFor="let item of produtos">
     <div class="col-md-3">
       <div class="card">
         <div class="card-main">
@@ -85,14 +85,7 @@
           <div class="image">
 
             <img
-              src="{{item.image}}"
-              alt="Image"
-              onmouseover="this.src='../assets/img/modeloCamisa2.png'"
-              onmouseout="this.src='../assets/img/modeloCamisa.png'"
-            />
-
-            <img
-              src="../assets/img/modeloCamisa.png"
+              src="{{item.imagem}}"
               alt="Image"
               onmouseover="this.src='../assets/img/modeloCamisa2.png'"
               onmouseout="this.src='../assets/img/modeloCamisa.png'"
@@ -110,8 +103,8 @@
 
         <div class="content">
           <!-- title Api -->
-          <a>{{item.title}}</a>
-          <a href="">CONJUNTO SOCIAL SHORTS E BLUSA - VERMELHO</a>
+          <a></a>
+          <a href="">{{item.nomeproduto}}</a>
           <div class="rating">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -120,13 +113,13 @@
           </div>
           <p>
             <!-- preco Api -->
-            <span class="money">{{item.price}}</span>
-            <span class="money">R$129.90</span
+            <span class="money"></span>
+            <span class="money">R${{item.produtopreco}}</span
             ><span class="old-price">R$150.00</span>
           </p>
           <p></p>
           <!-- parcela Api -->
-          <p class="parcela">{{item.parcela}}</p>
+          <p class="parcela"></p>
           <p class="parcela">3x de R$53,30 sem juros</p>
         </div>
       </div>
@@ -167,7 +160,7 @@
         </div>
 
         <div class="content">
-          <a href="">CONJUNTO SOCIAL SHORTS E BLUSA - AZUL</a>
+          <a href="">aa</a>
           <div class="rating">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
