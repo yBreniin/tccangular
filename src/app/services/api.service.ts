@@ -22,4 +22,9 @@ export class ApiService {
   listarProdutos(): Observable<Produtos[]> {
     return this.http.get<Produtos[]>(this.API);
   }
+
+  listarProdutosId(id: number): Observable<Produtos> {
+    return this.http.get<Produtos>(`$(this.url)/$(id)`).pipe((retorno => retorno
+    ))
+  }
 }
