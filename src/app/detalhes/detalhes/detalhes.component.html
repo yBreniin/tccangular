@@ -1,48 +1,45 @@
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
-
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script
-  src="https://kit.fontawesome.com/a076d05399.js"
-  crossorigin="anonymous"
-
-></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style>
   .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
   }
-  </style>
+</style>
 
 
 <body>
-  <header  class="header1">
-    <mat-toolbar class="fundo" >
+  <header class="header1">
+    <mat-toolbar class="fundo">
       <span class="h2span">Custom Clothing</span>
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>
       <button mat-flat-button routerLink="/home">
         <span>Home</span>
       </button>
-      <button mat-flat-button  routerLink="/lookbook">
+      <button mat-flat-button routerLink="/lookbook">
         <span>Lookbook</span>
       </button>
       <button mat-flat-button routerLink="/mans">
         <span>Mans</span>
       </button>
-      <button mat-flat-button  routerLink="/woman">
+      <button mat-flat-button routerLink="/woman">
         <span>Woman</span>
       </button>
-      <button mat-flat-button  routerLink="/sales">
+      <button mat-flat-button routerLink="/sales">
         <span>Sales</span>
       </button>
-      <button mat-flat-button  routerLink="/stores">
+      <button mat-flat-button routerLink="/stores">
         <span>Stores</span>
       </button>
       <button mat-icon-button class="example-icon">
@@ -57,36 +54,29 @@
       </mat-form-field>
     </mat-toolbar>
 
-</header>
-  <div class="espaco">
-
-
-
-  <div class="row">
-    <div class="col-md-5">
-      <div class="card">
-        <div class="card-main">
-          <!-- <div class="discount">40% off</div> -->
-          <!-- <div class="label label-green">FRETE GRÁTIS</div> -->
-          <!-- img pequenado lado -->
-          <div class="product-container">
-          <div class="p"><img src="../assets/img/modeloCamisa.png" alt="Product"> </div>
-          <div class="p"><img src="../assets/img/modeloCamisa2.png" alt="Product"> </div>
-          <div class="p"><img src="../assets/img/modeloCamisa.png" alt="Product"> </div>
+  </header>
+  <div class="espaco" *ngFor="let item of products">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-main">
+            <!-- <div class="discount">40% off</div> -->
+            <!-- <div class="label label-green">FRETE GRÁTIS</div> -->
+            <!-- img pequenado lado -->
+            <div class="product-container">
+              <div class="p"><img src="../assets/img/modeloCamisa.png" alt="Product"> </div>
+              <div class="p"><img src="../assets/img/modeloCamisa2.png" alt="Product"> </div>
+              <div class="p"><img src="../assets/img/modeloCamisa.png" alt="Product"> </div>
+            </div>
+            <div>
+              <img src="{{item.imagem}}" alt="Image" onmouseover="this.src='../assets/img/modeloCamisa2.png'"
+                onmouseout="this.src='../assets/img/modeloCamisa.png'" />
+            </div>
+            <!-- espaço branco -->
+            <!-- <div class="cart-line"></div> -->
           </div>
-          <div >
-            <img
-              src="../assets/img/modeloCamisa.png"
-              alt="Image"
-              onmouseover="this.src='../assets/img/modeloCamisa2.png'"
-              onmouseout="this.src='../assets/img/modeloCamisa.png'"
-            />
-          </div>
-          <!-- espaço branco -->
-          <!-- <div class="cart-line"></div> -->
-        </div>
 
-        <!-- <div class="content">
+          <!-- <div class="content">
           <a href="">Calça Jeans Skinny Cintura Alta</a>
           <div class="rating">
             <i class="fa fa-star"></i>
@@ -100,78 +90,71 @@
           </p>
           <p class="parcela">3x de R$53,30 sem juros</p>
         </div> -->
+        </div>
       </div>
-    </div>
 
-    <!-- 2card -->
-    <div class="col-md-5">
-      <div class="card">
-        <div class="card-main">
+      <!-- 2card -->
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-main">
 
-          <div class="image">
+            <div class="image">
 
-            <div class="content">
-              <a href="">CONJUNTO SOCIAL SHORTS E BLUSA - VERMELHO
-                <hr style="size:30; width: 2;align-items: center;"> </a>
+              <div class="content">
+                <a href="">{{item.nomeproduto}}
+                  <hr style="size:30; width: 2;align-items: center;">
+                </a>
 
 
                 <!-- estrela -->
 
-            <p>
-              <span>
-              <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-              <div class="estrelas">
-                <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                <label for="cm_star-1"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                <label for="cm_star-2"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                <label for="cm_star-3"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                <label for="cm_star-4"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                <label for="cm_star-5"><i class="fa"></i></label>
-                <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                <p>
+                  <span>
+                    <div style="font-size:x-large; color: orange;">
+                      <ngb-rating [max]="5" [rate]='item.avaliacao' [readonly]="true"></ngb-rating>
+                    </div>
+                  </span>
+                  <span>{{item.descricao}}</span>
+                </p>
+                <!-- fim estrela -->
+
+                <p class="valor">
+                  <span class="money">R${{item.produtopreco}}</span>
+                  <span class="old-price">R${{item.precoantigo}}</span>
+                </p>
+                <p class="parcela">3x de R$53,30 sem juros no cartão</p>
+
+                <p class="cor">Cor: {{item.cor}}
+                  <span>
+                    <div id="circulo"></div>
+                  </span>
+                </p>
+
+                <p class="tam">Tamanho</p>
+
+                <div id="quadrado">
+                  <p>{{item.tamanho2}}</p>
+                </div>
               </div>
-            </span>
-            <span>Vendido e entregue por Custom Clothing</span>
-          </p>
-          <!-- fim estrela -->
 
-            <p class="valor">
-              <span class="money">R$129.90</span
-              ><span class="old-price">R$150.00</span>
-            </p>
-            <p class="parcela">3x de R$53,30 sem juros no cartão</p>
+              <div class="botao">
+                <input href="order-summary.html" routerLink="/carrinho"
+                  class="btn btn-success pull-right btn-lg btn-block" type="button" value="COMPRAR">
+              </div>
 
-            <p class="cor">Cor: Vermelho
-              <span><div id="circulo"></div></span>
-            </p>
 
-            <p class="tam">Tamanho</p>
-
-            <div id="quadrado">
-              <p>P</p></div>
-            </div>
-
-            <div  class="botao" >
-              <input href="order-summary.html" routerLink="/carrinho" class="btn btn-success pull-right btn-lg btn-block"  type="button" value="COMPRAR">
             </div>
 
 
+            <!-- espaço branco -->
+            <!-- <div class="cart-line"></div> -->
           </div>
-
-
-          <!-- espaço branco -->
-          <!-- <div class="cart-line"></div> -->
         </div>
       </div>
-    </div>
-    <!-- fim -->
+      <!-- fim -->
 
-</div>
-</div>
+    </div>
+  </div>
 
   <!-- fim card produto -->
 </body>
-

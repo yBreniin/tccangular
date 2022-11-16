@@ -2,22 +2,12 @@
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script
-  src="https://kit.fontawesome.com/a076d05399.js"
-  crossorigin="anonymous"
-></script>
-<link
-  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-  rel="stylesheet"
-/>
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-/>
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-/>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style>
   .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
@@ -54,13 +44,7 @@
       <mat-form-field class="example-form-field" appearance="fill">
         <mat-icon color="primary">search</mat-icon>
         <input matInput type="text" [(ngModel)]="value" />
-        <button
-          *ngIf="value"
-          matSuffix
-          mat-icon-button
-          aria-label="Clear"
-          (click)="value = ''"
-        >
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
           <mat-icon color="primary" style="width: 100px">close</mat-icon>
         </button>
       </mat-form-field>
@@ -88,16 +72,11 @@
               <!-- <div class="p"><img src="../assets/img/class2.jpg" alt="Product"> </div> -->
               <!-- </div> -->
               <div class="image">
-                <img
-                  src="{{ item.imagem }}"
-                  alt="Image"
-                  onmouseover="this.src='../assets/img/modeloCamisa2.png'"
-                  onmouseout="this.src='../assets/img/modeloCamisa.png'"
-                />
+                <img src="{{ item.imagem }}" alt="Image" onmouseover="" onmouseout="" />
                 <div class="cart-item">
                   <ul>
                     <li>
-                      <span class="material-icons" routerLink="/detalhes">
+                      <span class="material-icons" routerLink="/detalhes/{{item.id}}">
                         shopping_cart
                       </span>
                     </li>
@@ -123,22 +102,20 @@
               </div>
               <p>
                 <!-- preco Api -->
-                <span class="money"></span>
-                <span class="money">R${{ item.produtopreco }}</span
-                ><span class="old-price">R$150.00</span>
+                <span class="money">R${{ item.produtopreco }}</span>
+                <span class="old-price">{{item.precoantigo}}</span>
               </p>
               <p></p>
               <!-- parcela Api -->
-              <p class="parcela"></p>
-              <p class="parcela">3x de R$53,30 sem juros</p>
+              <p class="parcela">---</p>
             </div>
           </div>
         </div>
       </ng-container>
-          <div>
-          </div>
-        </div>
+      <div>
       </div>
+    </div>
+  </div>
 
   <!-- fim card produto -->
   <script src="../../../main.js"></script>

@@ -5,12 +5,11 @@ import { Produtos } from '../core/model';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-
-  constructor( private http:HttpClient) { }
-  private readonly API = "http://localhost:8080/produtos/todos"
+  constructor(private http: HttpClient) {}
+  private readonly API = 'http://localhost:8080/produtos/todos';
 
   //link da api ""
   // getProduct(){
@@ -24,7 +23,8 @@ export class ApiService {
   }
 
   listarProdutosId(id: number): Observable<Produtos> {
-    return this.http.get<Produtos>(`$(this.url)/$(id)`).pipe((retorno => retorno
-    ))
+    return this.http
+      .get<Produtos>(`$(this.url)/$(id)`)
+      .pipe((retorno) => retorno);
   }
 }
