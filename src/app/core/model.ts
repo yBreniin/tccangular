@@ -2,7 +2,7 @@ export interface Produtos {
   id: number;
   nomeproduto: string;
   produtopreco: number;
-  precoantigo: number;
+  oldprice: number;
   descricao: string;
   tamanho: number;
   tamanho2: string;
