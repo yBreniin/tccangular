@@ -2,25 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { Produtos } from 'src/app/core/model';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { CarrinhoapiService } from 'src/app/services/carrinhoapi.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-
 export class HomeComponent implements OnInit {
   value = 'Pesquisar';
-  api = ['nomeproduto', 'produtopreco'];
-  constructor(
-    private activatedRoute: ActivatedRoute){}
 
-  ngOnInit(): void {}
+  public totalItem: number = 0;
+  constructor(private cartService: CarrinhoapiService) {}
 
-  // exibirProduto() {
-  //   const id = Number(this.activatedRoute.snapshot.paramMap.get('idProdutos'));
-  //   this.homeService.listarProdutoId(1).subscribe(retorno => {
-  //     this.produtos = retorno;
-  //   })
-  // }
+  ngOnInit(): void {
+    this.cartService.getProducts().subscribe((res) => {
+      this.totalItem = res.length;
+    });
+  }
+
+  addtocart(item: any) {
+    this.cartService.addtoCart(item);
+  }
 }

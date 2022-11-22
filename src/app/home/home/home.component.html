@@ -18,40 +18,40 @@
 </style>
 
 <body>
-  <header  class="header1">
-      <mat-toolbar class="fundo" >
-        <span class="h2span">Custom Clothing</span>
-        <span class="example-spacer"></span>
-        <span class="example-spacer"></span>
-        <button mat-flat-button routerLink="/home">
-          <span>Home</span>
+  <header class="header1">
+    <mat-toolbar class="fundo">
+      <span class="h2span">Custom Clothing</span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <button mat-flat-button routerLink="/home">
+        <span>Home</span>
+      </button>
+      <button mat-flat-button routerLink="/lookbook">
+        <span>Lookbook</span>
+      </button>
+      <button mat-flat-button routerLink="/mans">
+        <span>Mans</span>
+      </button>
+      <button mat-flat-button routerLink="/woman">
+        <span>Woman</span>
+      </button>
+      <button mat-flat-button routerLink="/sales">
+        <span>Sales</span>
+      </button>
+      <button mat-flat-button routerLink="/stores">
+        <span>Stores</span>
+      </button>
+      <button mat-icon-button class="example-icon" routerLink="/carrinho">
+        <mat-icon matBadge={{totalItem}} color="primary">shopping_cart</mat-icon>
+      </button>
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-icon color="primary">search</mat-icon>
+        <input matInput type="text" [(ngModel)]="value" />
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+          <mat-icon color="primary" style="width: 100px;">close</mat-icon>
         </button>
-        <button mat-flat-button  routerLink="/lookbook">
-          <span>Lookbook</span>
-        </button>
-        <button mat-flat-button routerLink="/mans">
-          <span>Mans</span>
-        </button>
-        <button mat-flat-button  routerLink="/woman">
-          <span>Woman</span>
-        </button>
-        <button mat-flat-button  routerLink="/sales">
-          <span>Sales</span>
-        </button>
-        <button mat-flat-button  routerLink="/stores">
-          <span>Stores</span>
-        </button>
-        <button mat-icon-button class="example-icon">
-          <mat-icon color="primary">shopping_cart</mat-icon>
-        </button>
-        <mat-form-field class="example-form-field" appearance="fill">
-          <mat-icon color="primary">search</mat-icon>
-          <input matInput type="text" [(ngModel)]="value" />
-          <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
-            <mat-icon color="primary" style="width: 100px;">close</mat-icon>
-          </button>
-        </mat-form-field>
-      </mat-toolbar>
+      </mat-form-field>
+    </mat-toolbar>
 
   </header>
 
@@ -552,7 +552,7 @@
     </div>
 
     <div class="text2">
-      <form class="row g-3" >
+      <form class="row g-3">
         <div class="col-auto">
           <label for="inputPassword2" class="visually-hidden">Nome</label>
           <input class="form-control" id="inputPassword2" placeholder="Nome">

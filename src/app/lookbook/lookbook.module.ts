@@ -10,12 +10,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
-  declarations: [
-    LookbookComponent
-  ],
+  declarations: [LookbookComponent],
   imports: [
     CommonModule,
     LookbookRoutingModule,
@@ -26,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    MatBadgeModule,
+  ],
 })
-export class LookbookModule { }
+export class LookbookModule {}

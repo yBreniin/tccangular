@@ -2,6 +2,7 @@ import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produtos } from '../../core/model';
+import { CarrinhoapiService } from 'src/app/services/carrinhoapi.service';
 
 @Component({
   selector: 'app-lookbook',
@@ -9,22 +10,30 @@ import { Produtos } from '../../core/model';
   styleUrls: ['./lookbook.component.scss'],
 })
 export class LookbookComponent implements OnInit {
-  produtos: Produtos[] = [];
-
   value = 'Pesquisar';
-  constructor(private api: ApiService) {}
+
+  public productList: any;
+  public totalItem: number = 0;
+  constructor(
+    private api: ApiService,
+    private cartService: CarrinhoapiService
+  ) {}
 
   ngOnInit(): void {
-    this.listarProdutos();
+    this.api.getProduct().subscribe((retorno) => {
+      this.productList = retorno;
 
-    // this.api.getProduct().subscribe(res=>{
-    //   this.productList=res;
-    // })
+      this.productList.forEach((a: any) => {
+        Object.assign(a, { quantity: 1, total: a.produtopreco });
+      });
+    });
+
+    this.cartService.getProducts().subscribe((res) => {
+      this.totalItem = res.length;
+    });
   }
 
-  async listarProdutos() {
-    this.api.listarProdutos().subscribe((retorno) => {
-      this.produtos = retorno;
-    });
+  addtocart(item: any) {
+    this.cartService.addtoCart(item);
   }
 }

@@ -38,8 +38,8 @@
       <button mat-flat-button routerLink="/stores">
         <span>Stores</span>
       </button>
-      <button mat-icon-button class="example-icon">
-        <mat-icon color="primary">shopping_cart</mat-icon>
+      <button mat-icon-button class="example-icon" routerLink="/carrinho">
+        <mat-icon matBadge={{totalItem}} color="primary">shopping_cart</mat-icon>
       </button>
       <mat-form-field class="example-form-field" appearance="fill">
         <mat-icon color="primary">search</mat-icon>
@@ -59,7 +59,7 @@
 
     <div class="row">
       <!-- card1 -->
-      <ng-container *ngFor="let item of produtos">
+      <ng-container *ngFor="let item of productList">
         <div class="col-md-3">
           <div class="card">
             <div class="card-main">
@@ -76,7 +76,8 @@
                 <div class="cart-item">
                   <ul>
                     <li>
-                      <span class="material-icons" routerLink="/detalhes/{{item.id}}">
+                      <span (click)="addtocart(item)" class="material-icons">
+                        <!-- routerLink="/detalhes/{{item.id}}" -->
                         shopping_cart
                       </span>
                     </li>

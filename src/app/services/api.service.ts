@@ -9,22 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
-  private readonly API = 'http://localhost:8080/produtos/todos';
 
-  //link da api ""
-  // getProduct(){
-  //   return this.http.get("https://localhost:8080/produtos/todos").pipe(map((res:any)=>{
-  //     return res;
-  //   }))
-  // }
-
-  listarProdutos(): Observable<Produtos[]> {
-    return this.http.get<Produtos[]>(this.API);
-  }
-
-  listarProdutosId(id: number): Observable<Produtos> {
-    return this.http
-      .get<Produtos>(`$(this.url)/$(id)`)
-      .pipe((retorno) => retorno);
+  getProduct() {
+    return this.http.get<any>('http://localhost:8080/produtos/todos').pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
   }
 }

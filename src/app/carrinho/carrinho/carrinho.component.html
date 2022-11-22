@@ -1,283 +1,107 @@
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 </style>
+
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script
-  src="https://kit.fontawesome.com/a076d05399.js"
-  crossorigin="anonymous"
-></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
- <header  class="header1">
-      <mat-toolbar class="fundo" >
-        <span class="h2span">Custom Clothing</span>
-        <span class="example-spacer"></span>
-        <span class="example-spacer"></span>
-        <button mat-flat-button routerLink="/home">
-          <span>Home</span>
-        </button>
-        <mat-toolbar class="fundo" class="header3" >
-          <span class="example-spacer"></span>
-          <button mat-flat-button class="finalizar">
-            <span routerLink="/home">FINALIZE O SEU PEDIDO</span>
-          </button>
-        </mat-toolbar>
-      </mat-toolbar>
-  </header>
-
-<!-- <div class="topo">
-<header>
-  <p class="header1">
-    <mat-toolbar class="header2" color="primary">
-      <span class="h2span">Custom Clothing</span>
+<header class="header1">
+  <mat-toolbar class="fundo">
+    <span class="h2span">Custom Clothing</span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <button mat-stroked-button color="primary" style="left: 67%;" routerLink="/home">Voltar
+      <mat-icon class="material-symbols-outlined">home</mat-icon>
+    </button>
+    <mat-toolbar class="fundo" class="header3">
       <span class="example-spacer"></span>
     </mat-toolbar>
-
-    <mat-toolbar class="header3" color="primary" >
-      <span class="example-spacer"></span>
-      <button color="primary" mat-flat-button class="finalizar">
-        <span routerLink="/home">FINALIZE O SEU PEDIDO</span>
-      </button>
-
-
-    </mat-toolbar>
-  </p>
+  </mat-toolbar>
 </header>
-</div> -->
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Meat | Angular 2</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-</head>
-<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body class="hold-transition skin-red layout-top-nav">
-<div class="wrapper">
-
-  <header class="main-header">
-    <nav class="navbar navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="index.html" class="navbar-brand"><b>Meat</b></a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-            <i class="fa fa-bars"></i>
-          </button>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="main-restaurants.html">Restaurantes <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Sobre</a></li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-
-      </div>
-      <!-- /.container-fluid -->
-    </nav>
-  </header>
-  <!-- Full Width Column -->
-  <div class="content-wrapper">
+<body style="margin-top: 160px;">
+  <ng-container *ngIf="products.length !=0">
     <div class="container">
-
-      <!--INICIO DO CONTEUDO-->
-      <section class="content-header">
-      </section>
-
-      <section class="content">
-        <section class="invoice">
-
-              <form>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <h2 class="page-header">
-                      <i class="fa fa-shopping-cart"></i> Finalize o seu pedido
-                    </h2>
-                  </div>
-                </div>
-
-
-                <!-- Table row -->
-                <div class="row, itens">
-                  <div class="col-xs-12">
-                    <p class="lead">Itens do Pedido:</p>
-                  </div>
-                  <div class="col-xs-12 table-responsive">
-
-                    <table class="table table-striped">
-                      <thead>
-                      <tr>
-                        <th class="text-center">Quantidade</th>
-                        <th>Item</th>
-                        <th>Descrição</th>
-                        <th class="text-right">Subtotal</th>
-                        <th class="text-right"></th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <tr>
-                        <td class="text-center">
-                          <input type="number" min="0" max="10" value="1" class="cart-quantity">
-                          <a class="btn btn-sm"><i class="fa fa-plus"></i></a>
-                        </td>
-                        <td><img class="imgitem" src="../assets/img/modeloCamisa.png"></td>
-
-                        <td>Conjunto Social - Vermelho</td>
-                        <td class="text-right">R$ 129,00</td>
-                        <td class="text-right">
-                          <a class="btn btn-sm danger"><i class="fa fa-remove"></i></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">
-                          <input type="number" min="0" max="10" value="1" class="cart-quantity">
-                          <a class="btn btn-sm"><i class="fa fa-plus"></i></a>
-                        </td>
-                        <td><img class="imgitem" src="../assets/img/modeloB.png"></td>
-
-
-                        <td>Camiseta branca</td>
-                        <td class="text-right">R$ 129,00</td>
-                        <td class="text-right">
-                          <a class="btn btn-sm danger "><i class="fa fa-remove"></i></a>
-                        </td>
-                      </tr>
-
-                      </tbody>
-                    </table>
-
-                  </div>
-                  <!-- /.col -->
-
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
-                  <!-- accepted payments column -->
-                  <hr style="size:30; width: 2;align-items: center;">
-                  <div class="col-sm-6 col-xs-12">
-                    <p class="lead">Formas de Pagamento:</p>
-
-                    <form>
-                      <select>
-                        <option>Dinheiro</option>
-                        <option>Cartao</option>
-                        <option>Pix</option>
-                      </select>
-                    </form>
-
-
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-sm-6 col-xs-12">
-                    <p class="lead">Frete e Total:</p>
-
-                    <div class="table-responsive">
-                      <table class="table">
-                        <tbody><tr>
-                          <th style="width:50%">Itens:</th>
-                          <td class="text-right">R$ 258,00</td>
-                        </tr>
-                        <tr>
-                          <th>Frete:</th>
-                          <td class="text-right">R$ 8,00</td>
-                        </tr>
-                        <tr>
-                          <th>Total:</th>
-                          <td class="text-right">R$ 266,00</td>
-                        </tr>
-                      </tbody></table>
-                    </div>
-                  </div>
-                  <!-- /.col -->
-                </div>
-
-
-                <div class="row invoice-info">
-                  <hr style="size:30; width: 2;align-items: center;">
-
-                  <div class="col-xs-12">
-                    <p class="lead">Endereço de Entrega:</p>
-                  </div>
-                  <div class="col-sm-6 col-xs-12">
-                    <div class="form-group">
-                      <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Endereço</label>
-                      <input type="text" class="form-control" id="inputSuccess" placeholder="Endereço">
-                      <span class="help-block"></span>
-                    </div>
-                  </div>
-                  <div class="col-sm-2 col-xs-6">
-                    <div class="form-group has-success">
-                      <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Número</label>
-                      <input type="text" class="form-control" id="inputSuccess" placeholder="Número">
-                      <span class="help-block"><i class="fa fa-check"></i> Ok</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 col-xs-6">
-                    <div class="form-group has-error">
-                      <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Complemento</label>
-                      <input type="text" class="form-control" id="inputSuccess" placeholder="Complemento">
-                      <span class="help-block"><i class="fa fa-remove"></i> Help block with error</span>
-                    </div>
-
-                  </div>
-                  <!-- /.col -->
-                </div>
-                <!-- /.row -->
-
-              </form>
-
-              <div class="row" >
-                <div class="col-xs-12" >
-                  <form>
-
-                    <input href="order-summary.html" routerLink="/finalizado" class="btn btn-success pull-right"  type="button" value="Concluir Pedido"
-                    ><i  class="fa fa-credit-card"></i>
-                    <!-- onClick="alert('SEU PEDIDO FOI ENVIADO A LOJA'); -->
-                    </form>
-
-                </div>
-              </div>
-
-          </section>
-      </section>
-      <!-- FIM DO CONTEUDO-->
+      <div class="cart-table">
+        <div class="cart-product">
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th>Sr.no</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of products; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{item.nomeproduto}}</td>
+                <td><img style="width: 120px;" src="{{item.imagem}}" alt=""></td>
+                <td>{{item.descricao}}</td>
+                <td>R${{item.produtopreco}}</td>
+                <td>{{item.quantidade}}</td>
+                <td>{{item.total}}</td>
+                <td>
+                  <button mat-raised-button color="warn" (click)="removeItem(item)">
+                    <mat-icon class="material-symbols-rounded">delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4"></td>
+                <td>
+                  <button mat-raised-button color="warn" (click)="emptycart()">
+                    Empty Cart
+                    <mat-icon class="material-symbols-rounded">delete</mat-icon>
+                  </button>
+                </td>
+                <td>
+                  <button mat-raised-button color="primary" routerLink="/home">
+                    Shop More
+                    <mat-icon class="material-symbols-rounded">menu_open</mat-icon>
+                  </button>
+                </td>
+                <td>
+                  <button mat-raised-button color="primary" routerLink="/finalizado">
+                    Checkout
+                    <mat-icon class="material-symbols-rounded">done</mat-icon>
+                  </button>
+                </td>
+                <!-- <td><strong>Grand Total: ${{grandTotal}}</strong></td> -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    <!-- /.container -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pagamento">
-      <div>
-        <span class="h2span">PAGAMENTO</span>
-       </div>
+  </ng-container>
 
+
+  <ng-container *ngIf="products.length ==0">
+    <div class="container">
+      <div class="card">
+        <h5 class="card-title" style="font-size: 20px;">Meu Carrinho</h5>
+      </div>
     </div>
-    <!-- /.container -->
-  </footer>
 
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery 2.2.3 -->
-<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="assets/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="assets/js/demo.js"></script>
-
-<script src="plugins/iCheck/icheck.min.js"></script>
-
+    <div class="center">
+      <img
+        src="https://images.prismic.io/eskolare/10fc8c1e-b0fe-4102-8e8b-1d39b214ee3c_Hero-Concierge.png?auto=compress,format&rect=0,0,1280,975&w=1280&h=975"
+        alt="">
+      <h4>Seu carrinho está vazio</h4>
+      <h6>Adicione um produto para continuar</h6>
+      <button mat-raised-button color="primary" routerLink="/home">Comprar agora!</button>
+    </div>
+  </ng-container>
 </body>
-</html>

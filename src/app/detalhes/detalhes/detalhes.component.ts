@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Produtos } from 'src/app/core/model';
 import { ApiService } from 'src/app/services/api.service';
+import { CarrinhoapiService } from 'src/app/services/carrinhoapi.service';
 
 @Component({
   selector: 'app-detalhes',
@@ -14,13 +15,14 @@ export class DetalhesComponent implements OnInit {
   singleProduct: any;
   constructor(
     private api: ApiService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private cartService: CarrinhoapiService
   ) {}
   ngOnInit(): void {
     let id = 0;
     this.activatedRoute.paramMap.subscribe((data: any) => {
       id = data.params.id;
-      this.api.listarProdutos().subscribe(
+      this.api.getProduct().subscribe(
         (retorno: any) => {
           this.products = retorno;
           this.products = this.products.filter((data: any) => data.id == id);

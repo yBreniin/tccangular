@@ -15,30 +15,27 @@
   }
 }
 
-
-.header1{
+.header1 {
   display: flex;
   margin-bottom: 0;
   list-style: none;
   z-index: 1;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
 
-  .fundo{
-    background-color: white ;
+  .fundo {
+    background-color: white;
   }
-
 }
-.app-toolbar{
+.app-toolbar {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 1000;
 }
-
 
 .header2 {
   height: 100px;
@@ -58,8 +55,7 @@
   width: 70%;
   display: flex;
   gap: 10px;
-  background-color: white ;
-
+  background-color: white;
 }
 
 .header3 button {
@@ -87,61 +83,59 @@
   text-align: center;
 }
 
-.redondo {
-  width: 100px;
-  height: 100px;
-  align-items: center;
-
-  .carousel-indicators {
-    bottom: -50px;
-  }
-
-  img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
-
-.pagamento{
-  margin-top: 5%;
-
-  .h2span {
-    flex: 4 1 auto;
-    text-align: center;
-    opacity: 1;
-    padding: 10px;
-    padding-left: 10%;
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
-  }
-
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
 }
 
-
-
-.itens{
-  padding-top: 5%;
-  padding-bottom: 5%;
-  border-radius: 20px;
-  size: 30;
-  width: 2;
-  align-items: left;
+.card {
+  height: 60vh;
+  margin: 25px;
+  padding: 25px;
 }
 
-.formas{
-  padding-top: 5%;
+.center img {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+  height: 162px;
+  width: 250px;
+  margin: 20px 0px;
 }
 
-.imgitem{
-  width: 80px;
+h4,
+h6 {
+  font-weight: 400;
 }
 
-.cart-quantity{
-  border: 1px solid #131313;
-  outline-color: #fd4646;
-  width: 2.4rem;
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 1rem;
+}
+
+.card-table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+.center .btn {
+  font-size: 14px !important;
+  margin-top: 20px !important;
+  font-weight: 400;
+  padding: 12px 72px;
+  border-radius: 3px !important;
 }
