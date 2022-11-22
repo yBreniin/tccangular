@@ -12,23 +12,15 @@ export class CarrinhoComponent implements OnInit {
   value = 'Pesquisar';
 
   public products: any = [];
-  public grandTotal!: number;
+  public grandTotal = 0;
   constructor(
-    private api: ApiService,
     private cartService: CarrinhoapiService
   ) {}
 
   ngOnInit(): void {
-    this.listarProdutos();
     this.cartService.getProducts().subscribe((res) => {
       this.products = res;
       this.grandTotal = this.cartService.getTotalPrice();
-    });
-  }
-
-  async listarProdutos() {
-    this.api.getProduct().subscribe((retorno) => {
-      this.products = retorno;
     });
   }
 
