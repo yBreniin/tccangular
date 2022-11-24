@@ -13,6 +13,10 @@ export class DetalhesComponent implements OnInit {
   value = 'Pesquisar';
   products: Produtos[] = [];
   singleProduct: any;
+
+  public productList: any;
+  public totalItem: number = 0;
+
   constructor(
     private api: ApiService,
     private activatedRoute: ActivatedRoute,
@@ -34,5 +38,21 @@ export class DetalhesComponent implements OnInit {
         }
       );
     });
+
+    this.api.getProduct().subscribe((retorno) => {
+      this.productList = retorno;
+
+      this.productList.forEach((a: any) => {
+        Object.assign(a, { quantity: 1, total: a.produtopreco });
+      });
+    });
+
+    this.cartService.getProducts().subscribe((res) => {
+      this.totalItem = res.length;
+    });
+  }
+
+  addtocart(item: any) {
+    this.cartService.addtoCart(item);
   }
 }

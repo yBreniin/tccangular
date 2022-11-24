@@ -1,0 +1,76 @@
+.example-form-field {
+  width: 200px;
+  height: 100px;
+  font-size: 15px;
+  top: 10px;
+  margin: 4px;
+  font-family: "Poppins", sans-serif;
+
+  mat-icon {
+    font-size: 20px;
+  }
+
+  .mat-input-element {
+    margin: 4px;
+  }
+}
+
+.header1 {
+  display: flex;
+  margin-bottom: 0;
+  list-style: none;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+
+  .fundo {
+    background-color: white;
+  }
+}
+.app-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header2 {
+  height: 100px;
+  width: 50%;
+}
+
+.h2span {
+  flex: 4 1 auto;
+  text-align: center;
+  opacity: 1;
+  padding: 10px;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.header3 {
+  height: 100px;
+  width: 70%;
+  display: flex;
+  gap: 10px;
+}
+
+.header3 button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.gd {
+  background: #ffffff;
+  width: auto;
+  height: 65%;
+  text-align: center;
+}
+
+.detalhes {
+  padding-top: 10px;
+}

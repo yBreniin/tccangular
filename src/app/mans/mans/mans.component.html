@@ -24,7 +24,7 @@
         <span>Home</span>
       </button>
       <button mat-flat-button routerLink="/lookbook">
-        <span>Lookbook</span>
+        <span>Products</span>
       </button>
       <button mat-flat-button routerLink="/mans">
         <span>Mans</span>
@@ -41,82 +41,82 @@
       <button mat-icon-button class="example-icon" routerLink="/carrinho">
         <mat-icon matBadge={{totalItem}} color="primary">shopping_cart</mat-icon>
       </button>
-      <mat-form-field class="example-form-field" appearance="fill">
+      <!-- <mat-form-field class="example-form-field" appearance="fill">
         <mat-icon color="primary">search</mat-icon>
         <input matInput type="text" [(ngModel)]="value" />
         <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
           <mat-icon color="primary" style="width: 100px">close</mat-icon>
         </button>
-      </mat-form-field>
+      </mat-form-field> -->
     </mat-toolbar>
   </header>
 
-  <div class="espaco">
-    <div class="text">
-      <a>Roupas Femininas</a>
+  <ng-container *ngIf="productList.length ==0">
+    <div style="padding: 100px; text-align:center;">
+      <h4 style="font-weight: 300;">Não há produtos masculino</h4>
+      <span style="font-weight: 300;">Volte mais tarde...</span>
     </div>
-    <hr style="size: 30; width: 2; align-items: center" />
+  </ng-container>
 
-    <div class="row">
-      <!-- card1 -->
-      <ng-container *ngFor="let item of productList">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-main">
-              <!-- <div class="discount">40% off</div> -->
-              <!-- <div class="label label-green">FRETE GRÁTIS</div> -->
-              <!-- img pequenado lado -->
-              <!-- <div class="product-container"> -->
-              <!-- <div class="p"><img src="../assets/img/calca.jpg" alt="Product"> </div> -->
-              <!-- <div class="p"><img src="../assets/img/calca3.jpg" alt="Product"> </div> -->
-              <!-- <div class="p"><img src="../assets/img/class2.jpg" alt="Product"> </div> -->
-              <!-- </div> -->
-              <div class="image">
-                <img src="{{ item.imagem }}" alt="Image" onmouseover="" onmouseout="" />
-                <div class="cart-item">
-                  <ul>
-                    <li>
-                      <span (click)="addtocart(item)" class="material-icons">
-                        <!-- routerLink="/detalhes/{{item.id}}" -->
-                        shopping_cart
-                      </span>
-                    </li>
-                    <li>
-                      <span class="material-icons"> favorite_border </span>
-                    </li>
-                  </ul>
+  <ng-container *ngIf="productList.length !=0">
+    <div class="espaco">
+      <div class="text">
+        <a>MASCULINO</a>
+      </div>
+      <hr style="size: 30; width: 2; align-items: center" />
+
+      <div class="row">
+        <!-- card1 -->
+        <ng-container *ngFor="let item of productList">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-main">
+                <div class="image">
+                  <img routerLink="/detalhes/{{item.id}}" src="{{ item.imagem }}" alt="Image" onmouseover="item.imagem"
+                    onmouseout="item.imagem" />
+                  <div class="cart-item">
+                    <ul>
+                      <li>
+                        <span (click)="addtocart(item)" class="material-icons">
+                          <!-- routerLink="/detalhes/{{item.id}}" -->
+                          shopping_cart
+                        </span>
+                      </li>
+                      <li>
+                        <span class="material-icons"> favorite_border </span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+                <!-- espaço branco -->
+                <!-- <div class="cart-line"></div> -->
               </div>
-              <!-- espaço branco -->
-              <!-- <div class="cart-line"></div> -->
-            </div>
 
-            <div class="content">
-              <!-- title Api -->
-              <a></a>
-              <a href="">{{ item.nomeproduto }}</a>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+              <div class="content">
+                <!-- title Api -->
+                <a></a>
+                <a href="">{{ item.nomeproduto }}</a>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  <!-- preco Api -->
+                  <span class="money">R${{ item.produtopreco }}</span>
+                  <span class="old-price">{{item.oldprice}}</span>
+                </p>
+                <p></p>
+                <!-- parcela Api -->
+                <!-- <p class="parcela">---</p> -->
               </div>
-              <p>
-                <!-- preco Api -->
-                <span class="money">R${{ item.produtopreco }}</span>
-                <span class="old-price">{{item.oldprice}}</span>
-              </p>
-              <p></p>
-              <!-- parcela Api -->
-              <p class="parcela">---</p>
             </div>
           </div>
-        </div>
-      </ng-container>
-      <div>
+        </ng-container>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- fim card produto -->
   <script src="../../../main.js"></script>

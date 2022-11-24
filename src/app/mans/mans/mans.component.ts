@@ -5,13 +5,12 @@ import { CarrinhoapiService } from 'src/app/services/carrinhoapi.service';
 @Component({
   selector: 'app-mans',
   templateUrl: './mans.component.html',
-  styleUrls: ['./mans.component.scss']
+  styleUrls: ['./mans.component.scss'],
 })
 export class MansComponent implements OnInit {
-
   value = 'Pesquisar';
 
-  public productList: any;
+  public productList: any = [];
   public totalItem: number = 0;
   constructor(
     private api: ApiService,
@@ -19,7 +18,7 @@ export class MansComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.api.getProduct().subscribe((retorno) => {
+    this.api.listarProdutosId(1).subscribe((retorno) => {
       this.productList = retorno;
 
       this.productList.forEach((a: any) => {
@@ -35,5 +34,4 @@ export class MansComponent implements OnInit {
   addtocart(item: any) {
     this.cartService.addtoCart(item);
   }
-
 }

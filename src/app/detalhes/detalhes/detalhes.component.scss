@@ -157,7 +157,10 @@
 
 img {
   width: 100%;
+  margin-top: 100px;
+  margin-left: -120px;
 }
+
 .card-main {
   position: relative;
 }
@@ -444,7 +447,7 @@ mat-icon {
 #circulo {
   width: 50px;
   height: 50px;
-  background-color: rgb(199, 118, 118);
+  background-color: #000;
 
   border-radius: 50%;
   margin-top: 6px;

@@ -10,12 +10,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
-  declarations: [
-    DetalhesComponent
-  ],
+  declarations: [DetalhesComponent],
   imports: [
     CommonModule,
     DetalhesRoutingModule,
@@ -26,7 +25,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatInputModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    MatBadgeModule,
+  ],
 })
-export class DetalhesModule { }
+export class DetalhesModule {}

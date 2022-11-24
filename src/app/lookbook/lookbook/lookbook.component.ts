@@ -12,7 +12,7 @@ import { CarrinhoapiService } from 'src/app/services/carrinhoapi.service';
 export class LookbookComponent implements OnInit {
   value = 'Pesquisar';
 
-  public productList: any;
+  public productList: any = [];
   public totalItem: number = 0;
   constructor(
     private api: ApiService,

@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
+  url = 'http://localhost:8080/produtos/todos';
+
   constructor(private http: HttpClient) {}
 
   getProduct() {
@@ -16,5 +18,11 @@ export class ApiService {
         return res;
       })
     );
+  }
+
+  listarProdutosId(genero_id: number): Observable<Produtos> {
+    return this.http
+      .get<Produtos>(`$(this.url)/$(genero_id)`)
+      .pipe((retorno) => retorno);
   }
 }
