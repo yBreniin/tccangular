@@ -9,24 +9,18 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 </head>
 
-<header>
-  <p class="header1">
-    <mat-toolbar class="header2" color="primary">
-      <span class="h2span">Custom Clothing</span>
+<header class="header1">
+  <mat-toolbar class="fundo">
+    <span class="h2span">Custom Clothing</span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <button mat-stroked-button color="primary" style="left: 67%;" routerLink="/home">Voltar
+      <mat-icon class="material-symbols-outlined">home</mat-icon>
+    </button>
+    <mat-toolbar class="fundo" class="header3">
       <span class="example-spacer"></span>
     </mat-toolbar>
-
-    <mat-toolbar class="header3" color="primary" >
-      <span class="example-spacer"></span>
-      <button color="primary" mat-flat-button class="finalizar">
-  <span><i class='bx bxs-cart-download icone' ></i> </span>
-        <span [routerLink]="['/home']" routerLinkActive="router-link-active" >PEDIDO CONCLUÍDO</span>
-      </button>
-
-
-    </mat-toolbar>
-  </p>
-
+  </mat-toolbar>
 </header>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-red layout-top-nav">
@@ -43,6 +37,29 @@
       <section class="content">
 
         <div class="jumbotron">
+
+          <section class="pedido">
+
+            <h2>Pedido Conluído</h2>
+          <p>Obrigado por comprar de sua casa! Cuidaremos para que tenha seu pedido o quanto antes.</p>
+          <p><b>Avalie</b> sua experiência:</p>
+          <span>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+            <div class="estrelas">
+              <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+              <label for="cm_star-1"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-1" name="fb" value="1"/>
+              <label for="cm_star-2"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-2" name="fb" value="2"/>
+              <label for="cm_star-3"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-3" name="fb" value="3"/>
+              <label for="cm_star-4"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-4" name="fb" value="4"/>
+              <label for="cm_star-5"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-5" name="fb" value="5"/>
+            </div>
+          </span>
+
           <div class="stepper-wrapper">
             <div class="stepper-item completed">
               <div class="step-counter"><i class='bx bxs-credit-card'></i></div>
@@ -61,30 +78,20 @@
               <div class="step-name">Concluído/Enviado</div>
             </div>
           </div>
-          <section class="pedido">
-
-            <h2>Pedido Conluído</h2>
-          <p>Seu pedido foi recebido pela loja!</p>
-          <p><b>Avalie</b> sua experiência:</p>
-          <span>
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-            <div class="estrelas">
-              <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-              <label for="cm_star-1"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-1" name="fb" value="1"/>
-              <label for="cm_star-2"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-2" name="fb" value="2"/>
-              <label for="cm_star-3"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-3" name="fb" value="3"/>
-              <label for="cm_star-4"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-4" name="fb" value="4"/>
-              <label for="cm_star-5"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-5" name="fb" value="5"/>
+          <hr style="width: 100%;">
+          <div>
+            <p>Voce pode ver abaixo os itens que foram enviados para voce e acompanhar o pedido.</p>
+            <div>
+              <p class="numeropedido"><b>N do pedido:</b>10003</p>
+              <p class="datapedido"><b>Pedido feito em:</b>Dez 8, 2022</p>
             </div>
-          </span>
-          </section>
+            <hr style="width: 100%;">
+            <div><p>hfsidfhs</p></div>
+          </div>
 
+          </section>
         </div>
+
 
       </section>
       <!-- FIM DO CONTEUDO -->
@@ -92,7 +99,42 @@
     <!-- /.container -->
   </div>
   <!-- /.content-wrapper -->
+  <ng-container>
+    <div class="container">
+      <div class="cart-table">
+        <div class="cart-product">
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th>Sr.no</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of products; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{item.nomeproduto}}</td>
+                <td><img style="width: 120px;" src="{{item.imagem}}" alt=""></td>
+                <td>{{item.descricao}}</td>
+                <td>R${{item.produtopreco}}</td>
+                <td>{{item.quantidade}}</td>
+                <td>{{item.total}}</td>
+                <td>
+                </td>
+              </tr>
 
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </ng-container>
 </div>
 <!-- ./wrapper -->
 

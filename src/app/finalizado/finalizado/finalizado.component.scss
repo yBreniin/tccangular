@@ -2,19 +2,15 @@
   padding: 5%;
 }
 
-.content{
-  padding-top: 10%;
-
-}
 
 .jumbotron{
-  background-color: beige;
+  background-color: #fffefe;
   padding: 10%;
   text-align: center;
 }
 
 .pedido{
-  padding-top: 5%;
+  margin-top: -70px;
 }
 .header1 {
   display: flex;
@@ -22,18 +18,22 @@
   list-style: none;
   z-index: 1;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
+  box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+
+  .fundo {
+    background-color: white;
+  }
 }
 
-.app-toolbar{
+.app-toolbar {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 1000;
 }
-
 
 .header2 {
   height: 100px;
@@ -50,11 +50,10 @@
 }
 
 .header3 {
-  height: 100px;
   width: 70%;
   display: flex;
   gap: 10px;
-
+  background-color: white;
 }
 
 .header3 button {
@@ -154,4 +153,12 @@
 
 .icone{
   padding-right: 10px;
+}
+
+.numeropedido{
+  text-align: left;
+}
+
+.datapedido{
+  text-align: right;
 }
