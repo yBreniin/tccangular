@@ -11,3 +11,32 @@ export interface Produtos {
   cor2: string;
   imagem: string;
 }
+
+export class Cliente {
+  id?: number;
+  senderName?: string;
+  senderCPF?: number;
+  senderEmail?: string;
+  senderAreaCode?: number;
+  senderPhone?: number;
+  shippingAddressStreet?: string;
+  shippingAddressNumber?: number;
+  shippingAddressComplement?: string;
+  shippingAddressDistrict?: string;
+  shippingAddressCity?: string;
+  shippingAddressState?: string;
+  shippingAddressPostalCode?: number;
+}
+
+export class Cartao {
+  id?: number;
+  nomepagamento?: string;
+  creditCardHolderName?: string;
+  numCartao?: string;
+  parcelas?: string;
+  mesValidade?: string;
+  anoValidade?: string;
+  cvvCartao?: string;
+  creditCardHolderCPF?: string;
+  creditCardHolderBirthDate?: Date;
+}

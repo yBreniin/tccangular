@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Produtos } from 'src/app/core/model';
-import { ApiService } from 'src/app/services/api.service';
 import { CarrinhoapiService } from 'src/app/services/carrinhoapi.service';
 
 @Component({
@@ -9,26 +7,22 @@ import { CarrinhoapiService } from 'src/app/services/carrinhoapi.service';
   styleUrls: ['./carrinho.component.scss'],
 })
 export class CarrinhoComponent implements OnInit {
-  value = 'Pesquisar';
-
-  public products: any = [];
-  public grandTotal = 0;
-  constructor(
-    private cartService: CarrinhoapiService
-  ) {}
+  public products : any = [];
+  public grandTotal !: number;
+  constructor(private cartService : CarrinhoapiService) { }
 
   ngOnInit(): void {
-    this.cartService.getProducts().subscribe((res) => {
+    this.cartService.getProducts()
+    .subscribe(res=>{
       this.products = res;
       this.grandTotal = this.cartService.getTotalPrice();
-    });
+    })
   }
-
-  removeItem(item: any) {
+  removeItem(item: any){
     this.cartService.removeCartItem(item);
   }
-
-  emptycart() {
+  emptycart(){
     this.cartService.removeAllCart();
   }
+
 }

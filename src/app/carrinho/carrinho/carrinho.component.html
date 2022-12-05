@@ -26,66 +26,52 @@
 </header>
 
 <body style="margin-top: 160px;">
-  <ng-container *ngIf="products.length !=0">
-    <div class="container">
-      <div class="cart-table">
-        <div class="cart-product">
-          <table class="table table-responsive">
-            <thead>
-              <tr>
-                <th>Sr.no</th>
-                <th>Product Name</th>
-                <th>Product Image</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of products; let i = index">
-                <td>{{i+1}}</td>
-                <td>{{item.nomeproduto}}</td>
-                <td><img style="width: 120px;" src="{{item.imagem}}" alt=""></td>
-                <td>{{item.descricao}}</td>
-                <td>R${{item.produtopreco}}</td>
-                <td>{{item.quantidade}}</td>
-                <td>{{item.total}}</td>
-                <td>
-                  <button mat-raised-button color="warn" (click)="removeItem(item)">
-                    <mat-icon class="material-symbols-rounded">delete</mat-icon>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="4"></td>
-                <td>
-                  <button mat-raised-button color="warn" (click)="emptycart()">
-                    Empty Cart
-                    <mat-icon class="material-symbols-rounded">delete</mat-icon>
-                  </button>
-                </td>
-                <td>
-                  <button mat-raised-button color="primary" routerLink="/home">
-                    Shop More
-                    <mat-icon class="material-symbols-rounded">menu_open</mat-icon>
-                  </button>
-                </td>
-                <td>
-                  <button mat-raised-button color="primary" routerLink="/finalizado">
-                    Checkout
-                    <mat-icon class="material-symbols-rounded">done</mat-icon>
-                  </button>
-                </td>
-                <!-- <td><strong>Grand Total: ${{grandTotal}}</strong></td> -->
-              </tr>
-            </tbody>
-          </table>
-        </div>
+<ng-container *ngIf="products.length !=0">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Nome do Produro</th>
+              <th>Produto</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Quantidade</th>
+              <th>Total</th>
+              <th>Remover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of products; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{item.nomeproduto}}</td>
+              <td><img style="width: 120px;" src="{{item.imagem}}" alt=""></td>
+              <td style="width: 25%;">{{item.descricao}}</td>
+              <th style="width: 12%;">{{item.produtopreco}}</th>
+              <td style="width: 12%;">{{item.quantity}}</td>
+              <td style="width: 12%;">{{item.total}}</td>
+              <td>
+                <button (click)="removeItem(item)" class="btn btn-danger">
+                  <mat-icon class="material-symbols-outlined">delete</mat-icon>
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td><button (click)="emptycart()" class="btn btn-danger">Esvaziar</button></td>
+              <td><button routerLink="/home" class="btn btn-primary">Comprar</button></td>
+              <td><button routerLink="/pagamento" class="btn btn-success">Finalizar</button></td>
+              <td><strong>Total : ${{grandTotal}}</strong></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </ng-container>
+  </div>
+</ng-container>
 
 
   <ng-container *ngIf="products.length ==0">
