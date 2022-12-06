@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  url = 'http://localhost:8080/produtos/todos';
+  pdTodos = 'http://localhost:8080/produtos/todos'
   clPost = 'http://localhost:8080/clientes'
   ccPost = 'http://localhost:8080/cartoes'
   clGet = 'http://localhost:8080/clientes/todos'
@@ -19,7 +19,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getProduct() {
-    return this.http.get<any>('http://localhost:8080/produtos/todos')
+    return this.http.get<any>(this.getGeneroNen)
     .pipe(map((res: any) => {
         return res;
       })
