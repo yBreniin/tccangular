@@ -18,7 +18,7 @@ export class MansComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.api.listarProdutosId(1).subscribe((retorno) => {
+    this.api.getPorGeneroMas().subscribe((retorno) => {
       this.productList = retorno;
 
       this.productList.forEach((a: any) => {

@@ -18,7 +18,7 @@ export class WomanComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.api.listarProdutosId(2).subscribe((retorno) => {
+    this.api.getPorGeneroFem().subscribe((retorno) => {
       this.productList = retorno;
 
       this.productList.forEach((a: any) => {

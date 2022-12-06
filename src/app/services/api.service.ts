@@ -11,12 +11,15 @@ export class ApiService {
   url = 'http://localhost:8080/produtos/todos';
   clPost = 'http://localhost:8080/clientes'
   ccPost = 'http://localhost:8080/cartoes'
+  getGeneroMas = 'http://localhost:8080/produtos/genero?id_genero=1'
+  getGeneroFem = 'http://localhost:8080/produtos/genero?id_genero=2'
+  getGeneroNen = 'http://localhost:8080/produtos/genero?id_genero=3'
 
   constructor(private http: HttpClient) {}
 
   getProduct() {
-    return this.http.get<any>('http://localhost:8080/produtos/todos').pipe(
-      map((res: any) => {
+    return this.http.get<any>('http://localhost:8080/produtos/todos')
+    .pipe(map((res: any) => {
         return res;
       })
     );
@@ -34,5 +37,23 @@ export class ApiService {
 
   postCartao(cartao?: Cartao): Observable<Object> {
     return this.http.post<Object>(`${this.ccPost}`, cartao)
+  }
+
+  getPorGeneroMas() {
+    return this.http
+    .get<Produtos>(this.getGeneroMas)
+    .pipe(map((res: any) => {
+        return res;
+      })
+    );
+  }
+
+  getPorGeneroFem() {
+    return this.http
+    .get<Produtos>(this.getGeneroFem)
+    .pipe(map((res: any) => {
+        return res;
+      })
+    );
   }
 }
