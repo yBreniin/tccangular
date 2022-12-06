@@ -11,6 +11,7 @@ export class ApiService {
   url = 'http://localhost:8080/produtos/todos';
   clPost = 'http://localhost:8080/clientes'
   ccPost = 'http://localhost:8080/cartoes'
+  clGet = 'http://localhost:8080/clientes/todos'
   getGeneroMas = 'http://localhost:8080/produtos/genero?id_genero=1'
   getGeneroFem = 'http://localhost:8080/produtos/genero?id_genero=2'
   getGeneroNen = 'http://localhost:8080/produtos/genero?id_genero=3'
@@ -51,6 +52,15 @@ export class ApiService {
   getPorGeneroFem() {
     return this.http
     .get<Produtos>(this.getGeneroFem)
+    .pipe(map((res: any) => {
+        return res;
+      })
+    );
+  }
+
+  getClientes() {
+    return this.http
+    .get<Cliente>(this.clGet)
     .pipe(map((res: any) => {
         return res;
       })

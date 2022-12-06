@@ -97,13 +97,13 @@
                   </div>
               </div>
 
-              <div class="col-md-6 shc">
+              <div class="col-md-6 shc" *ngFor="let item of clientes">
                   <div id="eventos">
                     <h1><i class="bi bi-truck"></i>Endereço de entrega</h1>
                     <div>
-                      <div> <p><b>Rua:</b>Humberto Alves</p></div>
-                      <div> <p><b>Numero:</b>698</p></div>
-                      <div> <p><b>Bairro:</b>Jd. Ubirama</p></div>
+                      <div> <p><b>Rua: </b>{{item.shippingAddressStreet}}</p></div>
+                      <div> <p><b>Numero: </b>{{item.shippingAddressNumber}}</p></div>
+                      <div> <p><b>Bairro: </b>{{item.shippingAddressDistrict}}</p></div>
                     </div>
                   </div>
 
